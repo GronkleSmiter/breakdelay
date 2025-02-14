@@ -109,100 +109,27 @@ public abstract class MultiPlayerGameModeMixin {
 
     @Shadow public abstract void handlePlaceRecipe(int p_105218_, Recipe<?> p_105219_, boolean p_105220_);
 
-    @Shadow @Final private static Logger LOGGER;
     @Shadow @Final private Minecraft minecraft;
-    @Shadow @Final private ClientPacketListener connection;
     @Shadow private BlockPos destroyBlockPos;
-    @Shadow private ItemStack destroyingItem;
     @Shadow private float destroyProgress;
     @Shadow private float destroyTicks;
     @Shadow private int destroyDelay;
     @Shadow private boolean isDestroying;
     @Shadow private GameType localPlayerMode;
-    @Shadow @Nullable private GameType previousLocalPlayerMode;
-    @Shadow private int carriedIndex;
 
-    @Shadow public abstract void adjustPlayer(Player p_105222_);
-
-    @Shadow public abstract void setLocalMode(GameType p_171806_, @org.jetbrains.annotations.Nullable GameType p_171807_);
-
-    @Shadow public abstract void setLocalMode(GameType p_105280_);
-
-    @Shadow public abstract boolean canHurtPlayer();
 
     @Shadow public abstract boolean destroyBlock(BlockPos p_105268_);
 
     @Shadow public abstract boolean startDestroyBlock(BlockPos p_105270_, Direction p_105271_);
 
-    @Shadow public abstract void stopDestroyBlock();
 
     @Shadow protected abstract void startPrediction(ClientLevel p_233730_, PredictiveAction p_233731_);
 
-    @Shadow public abstract float getPickRange();
-
-    @Shadow public abstract void tick();
 
     @Shadow protected abstract boolean sameDestroyTarget(BlockPos p_105282_);
 
     @Shadow protected abstract void ensureHasSentCarriedItem();
 
-    @Shadow public abstract InteractionResult useItemOn(LocalPlayer p_233733_, InteractionHand p_233734_, BlockHitResult p_233735_);
-
-    @Shadow protected abstract InteractionResult performUseItemOn(LocalPlayer p_233747_, InteractionHand p_233748_, BlockHitResult p_233749_);
-
-    @Shadow public abstract InteractionResult useItem(Player p_233722_, InteractionHand p_233723_);
-
-    @Shadow public abstract LocalPlayer createPlayer(ClientLevel p_105247_, StatsCounter p_105248_, ClientRecipeBook p_105249_);
-
-    @Shadow public abstract LocalPlayer createPlayer(ClientLevel p_105251_, StatsCounter p_105252_, ClientRecipeBook p_105253_, boolean p_105254_, boolean p_105255_);
-
-    @Shadow public abstract void attack(Player p_105224_, Entity p_105225_);
-
-    @Shadow public abstract InteractionResult interact(Player p_105227_, Entity p_105228_, InteractionHand p_105229_);
-
-    @Shadow public abstract InteractionResult interactAt(Player p_105231_, Entity p_105232_, EntityHitResult p_105233_, InteractionHand p_105234_);
-
-    @Shadow public abstract void handleInventoryMouseClick(int p_171800_, int p_171801_, int p_171802_, ClickType p_171803_, Player p_171804_);
-
-    @Shadow public abstract void handleInventoryButtonClick(int p_105209_, int p_105210_);
-
-    @Shadow public abstract void handleCreativeModeItemAdd(ItemStack p_105242_, int p_105243_);
-
-    @Shadow public abstract void handleCreativeModeItemDrop(ItemStack p_105240_);
-
-    @Shadow public abstract void releaseUsingItem(Player p_105278_);
-
-    @Shadow public abstract boolean hasExperience();
-
-    @Shadow public abstract boolean hasMissTime();
-
-    @Shadow public abstract boolean hasInfiniteItems();
-
-    @Shadow public abstract boolean hasFarPickRange();
-
-    @Shadow public abstract boolean isServerControlledInventory();
-
-    @Shadow public abstract boolean isAlwaysFlying();
-
-    @Shadow @Nullable public abstract GameType getPreviousPlayerMode();
-
-    @Shadow public abstract GameType getPlayerMode();
-
-    @Shadow public abstract boolean isDestroying();
 
     @Shadow public abstract int getDestroyStage();
-
-    @Shadow public abstract void handlePickItem(int p_105207_);
-
-    @Shadow protected abstract Packet lambda$useItem$5(InteractionHand par1, Player par2, MutableObject par3, int par4);
-
-    @Shadow protected abstract Packet lambda$useItemOn$4(MutableObject par1, LocalPlayer par2, InteractionHand par3, BlockHitResult par4, int par5);
-
-    @Shadow protected abstract Packet lambda$continueDestroyBlock$3(BlockPos par1, Direction par2, int par3);
-
-    @Shadow protected abstract Packet lambda$continueDestroyBlock$2(BlockPos par1, Direction par2, int par3);
-
-    @Shadow protected abstract Packet lambda$startDestroyBlock$1(BlockState par1, PlayerInteractEvent.LeftClickBlock par2, BlockPos par3, Direction par4, int par5);
-
-    @Shadow protected abstract Packet lambda$startDestroyBlock$0(BlockPos par1, Direction par2, int par3);
 }
