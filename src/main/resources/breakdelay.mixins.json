@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.breakdelay.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "breakdelay.refmap.json",
+  "mixins": [
+    "ServerPlayerGameModeMixin"
+  ],
+  "client": [
+    "MultiPlayerGameModeMixin"
+  ],
+  "minVersion": "0.8"
+}
